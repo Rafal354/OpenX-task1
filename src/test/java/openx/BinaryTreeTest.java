@@ -1,6 +1,7 @@
 package openx;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -153,9 +154,11 @@ public class BinaryTreeTest {
 
         return new BinaryTree(node10);
     }
+
     private static BinaryTree theRootItself() {
         return new BinaryTree(new Node(1));
     }
+
     private static BinaryTree unbalancedBinaryTree() {
         /*        1
          *       / \
@@ -193,6 +196,7 @@ public class BinaryTreeTest {
 
         return new BinaryTree(node7);
     }
+
     private static BinaryTree balancedBinaryTreeWithOneValueChanged() {
         /*        7
          *     /     \

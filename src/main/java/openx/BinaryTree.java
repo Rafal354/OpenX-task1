@@ -2,18 +2,23 @@ package openx;
 
 public class BinaryTree implements Tree {
     private final Node root;
+
     public BinaryTree(Node root) {
         this.root = root;
     }
+
     public int calculateLeavesNumber() {
         return calculateLeavesNumber(this.root);
     }
+
     public int calculateTheLargestPath() {
         return calculateTheLargestPath(this.root);
     }
+
     public boolean isTheSame(Tree other) {
         return isTheSame(this.root, ((BinaryTree) other).root);
     }
+
     private int calculateLeavesNumber(Node currentNode) {
         if (currentNode.getLeftChild() == null && currentNode.getRightChild() == null) {
             return 1;
@@ -26,6 +31,7 @@ public class BinaryTree implements Tree {
                     calculateLeavesNumber(currentNode.getRightChild());
         }
     }
+
     private int calculateTheLargestPath(Node currentNode) {
         if (currentNode.getLeftChild() == null && currentNode.getRightChild() == null) {
             return 0;
@@ -38,6 +44,7 @@ public class BinaryTree implements Tree {
                     calculateTheLargestPath(currentNode.getRightChild())) + 1;
         }
     }
+
     private boolean isTheSame(Node currentNode1, Node currentNode2) {
         if (currentNode1 == null && currentNode2 == null) {
             return true;
