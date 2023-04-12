@@ -16,7 +16,12 @@ public class BinaryTree implements Tree {
     }
 
     public boolean isTheSame(Tree other) {
-        return isTheSame(this.root, ((BinaryTree) other).root);
+        if (other instanceof BinaryTree binaryTree) {
+            return isTheSame(this.root, binaryTree.root);
+        } else {
+            return false;
+        }
+
     }
 
     private int calculateLeavesNumber(Node currentNode) {
